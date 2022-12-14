@@ -1,0 +1,17 @@
+PlayId,PlayName,PlayIteration,Name,Target API/FlowId,RateOfRequestsPerSecond,DurationInSeconds,VegetaTimeoutInMilliSeconds,KeepPersistentConnections,LoadRunDuration,TotalNumberOfRequests,TargetTypeDistribution,CurrentRPM,LatencyAtMeanUsage,LatencyAt50Usage,LatencyAt95Usage,LatencyAt99Usage,LatencyAtMaxUsage,SuccessRatio,Request#OverExpectedLatency,StatusCodes
+A04,play-A04-Internal-GreenVN-Random-Sequence-API,1,act-4.001,LA_GREENPIN_CREATE_PIN_ALLOCATION,1,1,120000,true,1,1,,60,10.775855ms,10.775855ms,10.775855ms,10.775855ms,10.775855ms,1.000,0,0=1 
+
+Notes:
+Target API/FlowId,LA_GREENPIN_CREATE_PIN_ALLOCATION
+Tenant ID,internal
+Load testing duration,0s
+Threshold Latency,500ms
+Breaking RPM,no breaking rpm encountered during the play
+Maximum RPM Tested Successfully,60
+Mean Latency at Max RPM,10.775855ms
+P95 Latency at Max RPM,10.775855ms
+Success Ratio at Max RPM,1.000
+VegetaTimeoutInMilliSeconds,2m0s
+Infra Details:
+Staging Environment Information,"We are using AuroraRDS + RDS Proxy; API Node t3a.2xlarge# = desired=25,min=25,max=25; auto scaling disabled; Call node t3a.2xlarge#=desired=15,min=15,max=15; Worker nodes t3a.2xlarge#=desired=12,min=12,max=12; We are using 1 queue node; c5large; 1 cache node- c5large;"
+

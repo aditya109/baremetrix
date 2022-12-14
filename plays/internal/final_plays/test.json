@@ -1,0 +1,120 @@
+{
+  "id": "A02",
+  "name": "play-A02-Internal-CompleteCallFlow-API",
+  "type": "internal",
+  "tenant": "internal",
+  "iterations": 1,
+  "flows": [
+    {
+      "name": "act-2.001",
+      "flow_id": "FLOW_SCENARIO_TYPE_1",
+      "scenes": [
+        {
+          "allocate_url": "http://leadassist-staging.exotel.in/v1/tenants/SID/greenvn",
+          "api": "LA_GREENVN_CREATE_ALLOCATION",
+          "method": "POST",
+          "headers": [
+            {
+              "key": "Content-type",
+              "value": "application/json"
+            }
+          ],
+          "endpoint": {
+            "authorization_type": "Basic",
+            "authorization_token": "ZXhvdGVsdDpleG90ZWx0",
+            "sid": "exotelt"
+          },
+          "pre_op_sequence": [],
+          "default_parameters": {
+            "seed": {
+              "apin": {
+                "min": 1000000000,
+                "max": 7000000000
+              },
+              "bpin": {
+                "min": 1000000000,
+                "max": 9000000000
+              },
+              "connection_id": {
+                "min": 0,
+                "max": 9999999999
+              }
+            },
+            "country_code": "+91",
+            "usage": "twoway",
+            "deallocation_policy": {
+              "duration": "5h"
+            }
+          },
+          "expected_rps": 29
+        },
+        {
+          "allocate_url": "http://leadassist-staging.exotel.in/v1/tenants/SID/exotel_webhook/scpt_caller_validate",
+          "api": "LA_EXOTEL_WEBHOOK_CALLER_VALIDATE",
+          "method": "GET",
+          "headers": [
+            {
+              "key": "Content-type",
+              "value": "application/json"
+            }
+          ],
+          "pre_op_sequence": [],
+          "expected_rps": 14
+        },
+        {
+          "allocate_url": "http://leadassist-staging.exotel.in/v1/tenants/SID/exotel_webhook/caller_connect",
+          "api": "LA_EXOTEL_WEBHOOK_CALLER_CONNECT",
+          "method": "GET",
+          "headers": [
+            {
+              "key": "Content-type",
+              "value": "application/json"
+            }
+          ],
+          "pre_op_sequence": [],
+          "expected_rps": 14
+        },
+        {
+          "allocate_url": "http://leadassist-staging.exotel.in/v1/tenants/SID/exotel_webhook/pt_post_connect",
+          "api": "LA_EXOTEL_WEBHOOK_PT_POST_CONNECT",
+          "method": "GET",
+          "headers": [
+            {
+              "key": "Content-type",
+              "value": "application/json"
+            }
+          ],
+          "pre_op_sequence": [],
+          "expected_rps": 14
+        },
+        {
+          "allocate_url": "http://leadassist-staging.exotel.in/v1/tenants/SID/greenvn/GREENVN_ID",
+          "api": "LA_GREENVN_DELETE_ALLOCATION",
+          "method": "DELETE",
+          "headers": [
+            {
+              "key": "Content-type",
+              "value": "application/json"
+            }
+          ],
+          "pre_op_sequence": [
+            "LA_GREENVN_CREATE_ALLOCATION"
+          ],
+          "expected_rps": 29
+        }
+      ],
+      "endpoint": {
+        "authorization_type": "Basic",
+        "authorization_token": "ZXhvdGVsdDpleG90ZWx0",
+        "sid": "exotelt"
+      },
+      "vegeta": {
+        "rate_of_requests": 10,
+        "duration_in_seconds": 60,
+        "duplicacy_percentage": 10,
+        "timeout_in_milliseconds": 120000,
+        "keep_alive": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+    "id": "A00",
+    "name": "play-A00-Internal-DeleteAllocationDetails-API",
+    "type": "internal",
+    "tenant": "mock",
+    "iterations": 1,
+    "acts": [
+        {
+            "name": "act-2.001",
+            "type": "sequence",
+            "allocate_url": "http://leadassist-staging.exotel.in/v1/tenants/SID/greenvn/GREENVN_ID",
+            "api": "LA_GREENVN_DELETE_ALLOCATION",
+            "method": "DELETE",
+            "headers": [
+                {
+                    "key": "Content-type",
+                    "value": "application/json"
+                }
+            ],
+            "endpoint": {
+                "authorization_type": "Basic",
+                "authorization_token": "ZXhvdGVsdDpleG90ZWx0",
+                "sid": "exotelt"
+            },
+            "pre_op_sequence": [
+                "LA_GREENVN_CREATE_ALLOCATION"
+            ],
+            "default_parameters": {
+                "seed": {
+                    "apin": {
+                        "min": 1000000000,
+                        "max": 7000000000
+                    },
+                    "bpin": {
+                        "min": 1000000000,
+                        "max": 9000000000
+                    },
+                    "connection_id": {
+                        "min": 0,
+                        "max": 1000000000000000000
+                    }
+                },
+                "country_code": "+91",
+                "usage": "twoway",
+                "deallocation_policy": {
+                    "duration": "130s"
+                }
+            },
+            "vegeta": {
+                "rate_of_requests": 100,
+                "duration_in_seconds": 60,
+                "duplicacy_percentage": 10,
+                "timeout_in_milliseconds": 120000,
+                "keep_alive": true
+            }
+        },
+        {
+            "name": "act-2.002",
+            "type": "sequence",
+            "allocate_url": "http://leadassist-staging.exotel.in/v1/tenants/SID/greenvn/GREENVN_ID",
+            "api": "LA_GREENVN_DELETE_ALLOCATION",
+            "method": "DELETE",
+            "headers": [
+                {
+                    "key": "Content-type",
+                    "value": "application/json"
+                }
+            ],
+            "endpoint": {
+                "authorization_type": "Basic",
+                "authorization_token": "ZXhvdGVsdDpleG90ZWx0",
+                "sid": "exotelt"
+            },
+            "pre_op_sequence": [
+                "LA_GREENVN_CREATE_ALLOCATION"
+            ],
+            "default_parameters": {
+                "seed": {
+                    "apin": {
+                        "min": 1000000000,
+                        "max": 7000000000
+                    },
+                    "bpin": {
+                        "min": 1000000000,
+                        "max": 9000000000
+                    },
+                    "connection_id": {
+                        "min": 0,
+                        "max": 1000000000000000000
+                    }
+                },
+                "country_code": "+91",
+                "usage": "twoway",
+                "deallocation_policy": {
+                    "duration": "130s"
+                }
+            },
+            "vegeta": {
+                "rate_of_requests": 200,
+                "duration_in_seconds": 10,
+                "duplicacy_percentage": 10,
+                "timeout_in_milliseconds": 120000,
+                "keep_alive": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+time="2022-11-18T18:38:58+05:30" level=info msg="# playfiles selected for load-testing: 1"
+time="2022-11-18T18:38:58+05:30" level=info msg="1.     /plays/internal/short_demo/play_greenvn_post.json"
+time="2022-11-18T18:38:58+05:30" level=info msg="==============================================================="
+time="2022-11-18T18:38:58+05:30" level=info msg="PLAY START: play-A01-Internal-CreateAllocation-API id: A01"
+time="2022-11-18T18:38:58+05:30" level=info msg="summary directory created."
+time="2022-11-18T18:38:58+05:30" level=info msg="ITERATION START: 1"
+time="2022-11-18T18:38:58+05:30" level=info msg="RUN START: act: act-1.001" act_api=LA_GREENVN_CREATE_ALLOCATION act_name=act-1.001 duration_in_second=180 iteration=1 play_id=A01 play_name=play-A01-Internal-CreateAllocation-API rate_per_second=20 rpm=1200 timeout_in_ms=120000 vegeta_keepalive=true
+time="2022-11-18T18:38:58+05:30" level=error msg="502 Bad Gateway" latency=495.965732ms seq=0 status_code=502
+time="2022-11-18T18:38:58+05:30" level=error msg="502 Bad Gateway" latency=487.806222ms seq=1 status_code=502
+time="2022-11-18T18:38:58+05:30" level=error msg="502 Bad Gateway" latency=489.600966ms seq=2 status_code=502
+time="2022-11-18T18:38:58+05:30" level=error msg="502 Bad Gateway" latency=491.253809ms seq=3 status_code=502
+time="2022-11-18T18:38:58+05:30" level=error msg="502 Bad Gateway" latency=490.26945ms seq=4 status_code=502
+time="2022-11-18T18:38:58+05:30" level=error msg="502 Bad Gateway" latency=491.339165ms seq=5 status_code=502
+time="2022-11-18T18:38:58+05:30" level=error msg="502 Bad Gateway" latency=442.763093ms seq=6 status_code=502
+time="2022-11-18T18:38:58+05:30" level=error msg="502 Bad Gateway" latency=429.048023ms seq=7 status_code=502
+time="2022-11-18T18:38:58+05:30" level=error msg="502 Bad Gateway" latency=390.733981ms seq=8 status_code=502
+time="2022-11-18T18:38:58+05:30" level=error msg="502 Bad Gateway" latency=383.357409ms seq=9 status_code=502
+time="2022-11-18T18:38:58+05:30" level=error msg="502 Bad Gateway" latency=340.287865ms seq=10 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=335.789992ms seq=11 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=286.565158ms seq=12 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=284.444881ms seq=13 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=244.017868ms seq=14 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=244.772535ms seq=15 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=244.463031ms seq=16 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=246.317682ms seq=17 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=245.563222ms seq=18 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=244.711929ms seq=19 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=246.088304ms seq=20 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=243.802503ms seq=21 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=245.432393ms seq=22 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=244.703901ms seq=23 status_code=502
+time="2022-11-18T18:38:59+05:30" level=error msg="502 Bad Gateway" latency=244.944923ms seq=24 status_code=502

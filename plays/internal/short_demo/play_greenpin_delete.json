@@ -1,0 +1,83 @@
+{
+  "id": "A06",
+  "name": "play-A06-Internal-GreenPin-Delete-API",
+  "type": "internal",
+  "tenant": "internal",
+  "iterations": 1,
+  "acts": [
+    {
+      "name": "act-6.001",
+      "type": "sequence",
+      "allocate_url": [
+        {
+          "use_case": "LA_GREENPIN_CREATE_PIN_ALLOCATION",
+          "url": "http://leadassist-staging.exotel.in/v1/tenants/SID/greenpin"
+        },
+        {
+          "use_case": "LA_GREENPIN_DELETE_PIN_ALLOCATION",
+          "url": "http://leadassist-staging.exotel.in/v1/tenants/SID/greenpin/GREENPIN_ID"
+        }
+      ],
+      "api": "LA_GREENPIN_DELETE_PIN_ALLOCATION",
+      "method": "DELETE",
+      "headers": [
+        {
+          "key": "Content-type",
+          "value": "application/json"
+        }
+      ],
+      "endpoint": {
+        "authorization_type": "Basic",
+        "authorization_token": "ZXhvdGVsdDpleG90ZWx0",
+        "sid": "exotelt"
+      },
+      "pre_op_sequence": [
+        "LA_GREENPIN_CREATE_PIN_ALLOCATION"
+      ],
+      "default_parameters": {
+        "seed": {
+          "apin": {
+            "min": 1000000000,
+            "max": 7000000000
+          },
+          "bpin": {
+            "min": 1000000000,
+            "max": 9000000000
+          },
+          "connection_id": {
+            "min": 0,
+            "max": 9000000000
+          },
+          "transaction_id": {
+            "min": 0,
+            "max": 1000000000000000000
+          },
+          "pin_length": {
+            "min": 1,
+            "max": 10
+          },
+          "vns": {
+            "min": 1000000000,
+            "max": 7000000000
+          },
+          "numbers": {
+            "min": 1000000000,
+            "max": 7000000000
+          }
+        },
+        "country_code": "+91",
+        "usage": "twoway",
+        "deallocation_policy": {
+          "duration": "1h"
+        }
+      },
+      "vegeta": {
+        "rate_of_requests": 10,
+        "duration_in_seconds": 5,
+        "duplicacy_percentage": 10,
+        "timeout_in_milliseconds": 120000,
+        "keep_alive": true
+      }
+    }
+  ]
+}

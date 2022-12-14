@@ -1,0 +1,16 @@
+time="2022-11-18T18:29:25+05:30" level=info msg="# playfiles selected for load-testing: 1"
+time="2022-11-18T18:29:25+05:30" level=info msg="1.     /plays/internal/devprod_scn/play_greenpin_post.json"
+time="2022-11-18T18:29:25+05:30" level=info msg="==============================================================="
+time="2022-11-18T18:29:25+05:30" level=info msg="PLAY START: play-A04-Internal-GreenVN-Random-Sequence-API id: A04"
+time="2022-11-18T18:29:25+05:30" level=info msg="summary directory created."
+time="2022-11-18T18:29:25+05:30" level=info msg="ITERATION START: 1"
+time="2022-11-18T18:29:25+05:30" level=info msg="RUN START: act: act-4.001" act_api=LA_GREENPIN_CREATE_PIN_ALLOCATION act_name=act-4.001 duration_in_second=1 iteration=1 play_id=A04 play_name=play-A04-Internal-GreenVN-Random-Sequence-API rate_per_second=1 rpm=60 timeout_in_ms=120000 vegeta_keepalive=true
+time="2022-11-18T18:29:26+05:30" level=error msg="Post \"http://leadassist-devprod.exotel.in/v1/tenants/exotelt/greenpin\": dial tcp: lookup leadassist-devprod.exotel.in: no such host" latency=10.775855ms seq=0 status_code=0
+time="2022-11-18T18:29:26+05:30" level=info msg="act summary recorded."
+time="2022-11-18T18:29:26+05:30" level=info msg="RUN COMPLETED !" 0=1 latency_max=10.775855ms latency_mean=10.775855ms latency_p50=10.775855ms latency_p95=10.775855ms latency_p99=10.775855ms number_of_requests=1 request_count_over_expected_latency=0 rpm=1 success_ratio=1.000
+time="2022-11-18T18:29:26+05:30" level=info msg="load test ran for 1 requests per second for 1 with 10% duplication of payload (a and b party nums)."
+time="2022-11-18T18:29:26+05:30" level=info msg="[0 60]"
+time="2022-11-18T18:29:26+05:30" level=info msg="[0 0.010775855]"
+time="2022-11-18T18:29:26+05:30" level=info msg="rpm_vs_latency graph generated."
+time="2022-11-18T18:29:26+05:30" level=error msg="invalid data range; cannot be zero"
+time="2022-11-18T18:29:26+05:30" level=error msg="invalid data range; cannot be zero"

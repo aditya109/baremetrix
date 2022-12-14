@@ -1,0 +1,138 @@
+{
+  "instance": {
+    "environment": {
+      "type": "staging",
+      "infra_details": "We are using AuroraRDS + RDS Proxy; API Node t3a.2xlarge# = desired=25,min=25,max=25; auto scaling disabled; Call node t3a.2xlarge#=desired=15,min=15,max=15; Worker nodes t3a.2xlarge#=desired=12,min=12,max=12; We are using 1 queue node; c5large; 1 cache node- c5large;"
+    },
+    "specs": {
+      "levelled_log": {
+        "file_specs": [
+          {
+            "container_directory": "/logs/<DIFFERENTIATOR_STAMP>/bare",
+            "filename": [
+              "baremetrix"
+            ],
+            "fileextension": ".log"
+          }
+        ],
+        "enable_logging_to_file": true,
+        "enable_logging_to_stdout": true,
+        "enable_colors": true,
+        "enable_full_timeStamp": true,
+        "output_formatter": "text"
+      },
+      "summary": {
+        "file_specs": [
+          {
+            "container_directory": "/logs/<DIFFERENTIATOR_STAMP>/summary",
+            "filename": [
+              "summary"
+            ],
+            "fileextension": ".csv"
+          }
+        ],
+        "expected_latency_in_milliseconds": 500
+      },
+      "play": {
+        "file_specs": [
+          {
+            "container_directory": "/plays/internal/short_demo",
+            "filename": [
+              "play_greenvn_post"
+            ],
+            "fileextension": ".json",
+            "should_run": true
+          }
+        ]
+      },
+      "prerequisite": {
+        "file_specs": [
+          {
+            "container_directory": "/logs/<DIFFERENTIATOR_STAMP>/data",
+            "filename": [
+              "data"
+            ],
+            "fileextension": ".txt",
+            "should_run": true
+          }
+        ],
+        "http_timeout_in_seconds": 660,
+        "batch_size": 300,
+        "conditional_batch_buffer": 2,
+        "conditional_batch_buffer_for_flows": 500
+      },
+      "visualization": {
+        "file_specs": [
+          {
+            "container_directory": "/logs/<DIFFERENTIATOR_STAMP>/summary",
+            "filename": [
+              "output"
+            ],
+            "fileextension": ".svg"
+          },
+          {
+            "container_directory": "/logs/<DIFFERENTIATOR_STAMP>/summary",
+            "filename": [
+              "output"
+            ],
+            "fileextension": ".png"
+          }
+        ],
+        "graph_types": [
+          {
+            "name": "rpm_vs_latency",
+            "title": "RPM v/s Latency Graph",
+            "is_enabled": true,
+            "x_axis_label": "Rate of requests per minute",
+            "y_axis_label": "Latency (in Seconds)",
+            "inner_plots": [
+              {
+                "name": "MeanLatency",
+                "label": "Mean Latency"
+              },
+              {
+                "name": "P50Latency",
+                "label": "P50 Latency"
+              },
+              {
+                "name": "P95Latency",
+                "label": "P95 Latency"
+              },
+              {
+                "name": "P99Latency",
+                "label": "P99 Latency"
+              },
+              {
+                "name": "MaxLatency",
+                "label": "Max Latency"
+              }
+            ]
+          },
+          {
+            "name": "rps_vs_delayed_responses",
+            "title": "RPM v/s Delayed response count Graph",
+            "is_enabled": true,
+            "x_axis_label": "Rate of requests per minute",
+            "y_axis_label": "Delayed response count",
+            "inner_plots": []
+          }
+        ]
+      },
+      "flow": {
+        "flow_types": [
+          {
+            "name": "flow_scenario_CREATE_ALLOCATION->CALLER_VALIDATE->CALLER_CONNECT->PT_POST_CONNECT->DELETE_ALLOCATION",
+            "id": "FLOW_SCENARIO_TYPE_1",
+            "flow": [
+              "LA_GREENVN_CREATE_ALLOCATION",
+              "LA_EXOTEL_WEBHOOK_CALLER_VALIDATE",
+              "LA_EXOTEL_WEBHOOK_CALLER_CONNECT",
+              "LA_EXOTEL_WEBHOOK_PT_POST_CONNECT",
+              "LA_GREENVN_DELETE_ALLOCATION"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

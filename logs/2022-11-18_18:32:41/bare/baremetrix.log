@@ -1,0 +1,72 @@
+time="2022-11-18T18:32:41+05:30" level=info msg="# playfiles selected for load-testing: 1"
+time="2022-11-18T18:32:41+05:30" level=info msg="1.     /plays/internal/devprod_scn/play_greenpin_post.json"
+time="2022-11-18T18:32:41+05:30" level=info msg="==============================================================="
+time="2022-11-18T18:32:41+05:30" level=info msg="PLAY START: play-A04-Internal-GreenVN-Random-Sequence-API id: A04"
+time="2022-11-18T18:32:41+05:30" level=info msg="summary directory created."
+time="2022-11-18T18:32:41+05:30" level=info msg="ITERATION START: 1"
+time="2022-11-18T18:32:41+05:30" level=info msg="RUN START: act: act-4.001" act_api=LA_GREENPIN_CREATE_PIN_ALLOCATION act_name=act-4.001 duration_in_second=300 iteration=1 play_id=A04 play_name=play-A04-Internal-GreenVN-Random-Sequence-API rate_per_second=40 rpm=2400 timeout_in_ms=120000 vegeta_keepalive=true
+time="2022-11-18T18:32:46+05:30" level=error msg="500 Internal Server Error" latency=2.80708043s seq=68 status_code=500
+time="2022-11-18T18:33:03+05:30" level=error msg="500 Internal Server Error" latency=508.255632ms seq=840 status_code=500
+time="2022-11-18T18:33:09+05:30" level=error msg="500 Internal Server Error" latency=435.813904ms seq=1088 status_code=500
+time="2022-11-18T18:33:14+05:30" level=error msg="500 Internal Server Error" latency=395.70393ms seq=1290 status_code=500
+time="2022-11-18T18:33:16+05:30" level=error msg="500 Internal Server Error" latency=370.580975ms seq=1349 status_code=500
+time="2022-11-18T18:33:18+05:30" level=error msg="500 Internal Server Error" latency=324.701843ms seq=1451 status_code=500
+time="2022-11-18T18:33:23+05:30" level=error msg="500 Internal Server Error" latency=322.836513ms seq=1667 status_code=500
+time="2022-11-18T18:33:35+05:30" level=error msg="500 Internal Server Error" latency=339.003268ms seq=2138 status_code=500
+time="2022-11-18T18:33:35+05:30" level=error msg="500 Internal Server Error" latency=299.374118ms seq=2148 status_code=500
+time="2022-11-18T18:33:53+05:30" level=error msg="500 Internal Server Error" latency=299.147818ms seq=2858 status_code=500
+time="2022-11-18T18:33:55+05:30" level=error msg="500 Internal Server Error" latency=319.507886ms seq=2922 status_code=500
+time="2022-11-18T18:33:56+05:30" level=error msg="500 Internal Server Error" latency=304.80841ms seq=2960 status_code=500
+time="2022-11-18T18:34:06+05:30" level=error msg="500 Internal Server Error" latency=304.753213ms seq=3373 status_code=500
+time="2022-11-18T18:34:07+05:30" level=error msg="500 Internal Server Error" latency=289.127259ms seq=3399 status_code=500
+time="2022-11-18T18:34:13+05:30" level=error msg="500 Internal Server Error" latency=288.046817ms seq=3668 status_code=500
+time="2022-11-18T18:34:15+05:30" level=error msg="500 Internal Server Error" latency=303.684795ms seq=3748 status_code=500
+time="2022-11-18T18:34:16+05:30" level=error msg="500 Internal Server Error" latency=308.986488ms seq=3749 status_code=500
+time="2022-11-18T18:34:16+05:30" level=error msg="500 Internal Server Error" latency=289.112901ms seq=3759 status_code=500
+time="2022-11-18T18:34:21+05:30" level=error msg="500 Internal Server Error" latency=290.143579ms seq=3971 status_code=500
+time="2022-11-18T18:34:22+05:30" level=error msg="500 Internal Server Error" latency=305.114861ms seq=3997 status_code=500
+time="2022-11-18T18:34:24+05:30" level=error msg="500 Internal Server Error" latency=301.509016ms seq=4091 status_code=500
+time="2022-11-18T18:34:26+05:30" level=error msg="500 Internal Server Error" latency=292.66198ms seq=4175 status_code=500
+time="2022-11-18T18:34:27+05:30" level=error msg="500 Internal Server Error" latency=310.968697ms seq=4212 status_code=500
+time="2022-11-18T18:34:28+05:30" level=error msg="500 Internal Server Error" latency=290.261191ms seq=4258 status_code=500
+time="2022-11-18T18:34:31+05:30" level=error msg="500 Internal Server Error" latency=292.737735ms seq=4358 status_code=500
+time="2022-11-18T18:34:35+05:30" level=error msg="500 Internal Server Error" latency=314.429351ms seq=4520 status_code=500
+time="2022-11-18T18:34:36+05:30" level=error msg="500 Internal Server Error" latency=308.011912ms seq=4576 status_code=500
+time="2022-11-18T18:34:38+05:30" level=error msg="500 Internal Server Error" latency=346.134606ms seq=4628 status_code=500
+time="2022-11-18T18:34:38+05:30" level=error msg="500 Internal Server Error" latency=316.999634ms seq=4637 status_code=500
+time="2022-11-18T18:34:38+05:30" level=error msg="500 Internal Server Error" latency=314.209093ms seq=4646 status_code=500
+time="2022-11-18T18:34:39+05:30" level=error msg="500 Internal Server Error" latency=304.566553ms seq=4692 status_code=500
+time="2022-11-18T18:34:41+05:30" level=error msg="500 Internal Server Error" latency=309.54567ms seq=4781 status_code=500
+time="2022-11-18T18:34:44+05:30" level=error msg="500 Internal Server Error" latency=314.652313ms seq=4892 status_code=500
+time="2022-11-18T18:34:49+05:30" level=error msg="500 Internal Server Error" latency=286.149943ms seq=5081 status_code=500
+time="2022-11-18T18:34:49+05:30" level=error msg="500 Internal Server Error" latency=310.061872ms seq=5093 status_code=500
+time="2022-11-18T18:34:49+05:30" level=error msg="500 Internal Server Error" latency=292.927328ms seq=5102 status_code=500
+time="2022-11-18T18:34:53+05:30" level=error msg="500 Internal Server Error" latency=301.187427ms seq=5238 status_code=500
+time="2022-11-18T18:34:54+05:30" level=error msg="500 Internal Server Error" latency=286.267832ms seq=5297 status_code=500
+time="2022-11-18T18:34:55+05:30" level=error msg="500 Internal Server Error" latency=310.111402ms seq=5326 status_code=500
+time="2022-11-18T18:34:57+05:30" level=error msg="500 Internal Server Error" latency=307.434644ms seq=5401 status_code=500
+time="2022-11-18T18:34:57+05:30" level=error msg="500 Internal Server Error" latency=291.370967ms seq=5402 status_code=500
+time="2022-11-18T18:34:59+05:30" level=error msg="500 Internal Server Error" latency=288.612796ms seq=5484 status_code=500
+time="2022-11-18T18:34:59+05:30" level=error msg="500 Internal Server Error" latency=285.465705ms seq=5488 status_code=500
+time="2022-11-18T18:35:00+05:30" level=error msg="500 Internal Server Error" latency=750.115118ms seq=5502 status_code=500
+time="2022-11-18T18:35:00+05:30" level=error msg="500 Internal Server Error" latency=284.020165ms seq=5539 status_code=500
+time="2022-11-18T18:35:02+05:30" level=error msg="500 Internal Server Error" latency=374.122569ms seq=5615 status_code=500
+time="2022-11-18T18:35:03+05:30" level=error msg="500 Internal Server Error" latency=436.610328ms seq=5629 status_code=500
+time="2022-11-18T18:35:05+05:30" level=error msg="500 Internal Server Error" latency=357.201037ms seq=5720 status_code=500
+time="2022-11-18T18:35:05+05:30" level=error msg="500 Internal Server Error" latency=337.277926ms seq=5723 status_code=500
+time="2022-11-18T18:35:06+05:30" level=error msg="500 Internal Server Error" latency=304.781138ms seq=5753 status_code=500
+time="2022-11-18T18:35:06+05:30" level=error msg="500 Internal Server Error" latency=337.043952ms seq=5782 status_code=500
+time="2022-11-18T18:35:07+05:30" level=error msg="500 Internal Server Error" latency=297.689756ms seq=5822 status_code=500
+time="2022-11-18T18:35:12+05:30" level=error msg="500 Internal Server Error" latency=308.173194ms seq=6006 status_code=500
+time="2022-11-18T18:35:12+05:30" level=error msg="500 Internal Server Error" latency=318.11229ms seq=6028 status_code=500
+time="2022-11-18T18:35:14+05:30" level=error msg="500 Internal Server Error" latency=290.449743ms seq=6086 status_code=500
+time="2022-11-18T18:35:15+05:30" level=error msg="500 Internal Server Error" latency=294.675892ms seq=6146 status_code=500
+time="2022-11-18T18:35:16+05:30" level=error msg="500 Internal Server Error" latency=295.439769ms seq=6153 status_code=500
+time="2022-11-18T18:35:19+05:30" level=error msg="500 Internal Server Error" latency=291.742414ms seq=6278 status_code=500
+time="2022-11-18T18:35:19+05:30" level=error msg="500 Internal Server Error" latency=294.857877ms seq=6293 status_code=500
+time="2022-11-18T18:35:20+05:30" level=error msg="500 Internal Server Error" latency=283.213986ms seq=6337 status_code=500
+time="2022-11-18T18:35:20+05:30" level=error msg="500 Internal Server Error" latency=281.944754ms seq=6349 status_code=500
+time="2022-11-18T18:35:21+05:30" level=error msg="500 Internal Server Error" latency=286.501722ms seq=6355 status_code=500
+time="2022-11-18T18:35:21+05:30" level=error msg="500 Internal Server Error" latency=334.662747ms seq=6360 status_code=500
+time="2022-11-18T18:35:22+05:30" level=error msg="500 Internal Server Error" latency=279.837129ms seq=6405 status_code=500
+time="2022-11-18T18:35:24+05:30" level=error msg="500 Internal Server Error" latency=284.825076ms seq=6496 status_code=500

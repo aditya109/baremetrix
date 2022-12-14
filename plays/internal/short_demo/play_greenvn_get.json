@@ -1,0 +1,67 @@
+{
+  "id": "A03",
+  "name": "play-A03-Internal-GetAllocationDetails-API",
+  "type": "internal",
+  "tenant": "internal",
+  "iterations": 1,
+  "acts": [
+    {
+      "name": "act-3.001",
+      "type": "sequence",
+      "allocate_url": [
+        {
+          "use_case": "LA_GREENVN_GET_ALLOCATION_DETAILS",
+          "url": "http://leadassist-staging.exotel.in/v1/tenants/SID/greenvn/GREENVN_ID"
+        },
+        {
+          "use_case": "LA_GREENVN_CREATE_ALLOCATION",
+          "url": "http://leadassist-staging.exotel.in/v1/tenants/SID/greenvn"
+        }
+      ],
+      "api": "LA_GREENVN_GET_ALLOCATION_DETAILS",
+      "method": "GET",
+      "headers": [
+        {
+          "key": "Content-type",
+          "value": "application/json"
+        }
+      ],
+      "endpoint": {
+        "authorization_type": "Basic",
+        "authorization_token": "ZXhvdGVsdDpleG90ZWx0",
+        "sid": "exotelt"
+      },
+      "pre_op_sequence": [
+        "LA_GREENVN_CREATE_ALLOCATION"
+      ],
+      "default_parameters": {
+        "seed": {
+          "apin": {
+            "min": 1000000000,
+            "max": 7000000000
+          },
+          "bpin": {
+            "min": 1000000000,
+            "max": 9000000000
+          },
+          "connection_id": {
+            "min": 0,
+            "max": 9000000000
+          }
+        },
+        "country_code": "+91",
+        "usage": "twoway",
+        "deallocation_policy": {
+          "duration": "400s"
+        }
+      },
+      "vegeta": {
+        "rate_of_requests": 50,
+        "duration_in_seconds": 10,
+        "duplicacy_percentage": 10,
+        "timeout_in_milliseconds": 120000,
+        "keep_alive": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "id": "A01",
+  "name": "play-A01-Internal-CreateAllocation-API",
+  "type": "internal",
+  "tenant": "internal",
+  "iterations": 1,
+  "acts": [
+    {
+      "name": "act-1.001",
+      "type": "single",
+      "allocate_url": [
+        {
+          "use_case": "LA_GREENVN_CREATE_ALLOCATION",
+          "url": "http://la-staging-newqa.devprodqa.exotel.in/v1/tenants/SID/greenvn"
+        }
+      ],
+      "api": "LA_GREENVN_CREATE_ALLOCATION",
+      "method": "POST",
+      "headers": [
+        {
+          "key": "Content-type",
+          "value": "application/json"
+        }
+      ],
+      "endpoint": {
+        "authorization_type": "Basic",
+        "authorization_token": "ZXhvdGVsdDpleG90ZWx0",
+        "sid": "exotelt"
+      },
+      "pre_op_sequence": [],
+      "default_parameters": {
+        "seed": {
+          "apin": {
+            "min": 1000000000,
+            "max": 7000000000
+          },
+          "bpin": {
+            "min": 1000000000,
+            "max": 9000000000
+          },
+          "connection_id": {
+            "min": 0,
+            "max": 9000000000
+          },
+          "transaction_id": {
+            "min": 0,
+            "max": 1000000000000000000
+          },
+          "pin_length": {
+            "min": 1,
+            "max": 10
+          },
+          "vns": {
+            "min": 1000000000,
+            "max": 7000000000
+          },
+          "numbers": {
+            "min": 1000000000,
+            "max": 7000000000
+          }
+        },
+        "country_code": "+91",
+        "usage": "twoway",
+        "deallocation_policy": {
+          "duration": "45m"
+        }
+      },
+      "vegeta": {
+        "rate_of_requests": 200,
+        "duration_in_seconds": 300,
+        "duplicacy_percentage": 10,
+        "timeout_in_milliseconds": 120000,
+        "keep_alive": true
+      }
+    },
+    {
+      "name": "act-1.002",
+      "type": "single",
+      "allocate_url": [
+        {
+          "use_case": "LA_GREENVN_CREATE_ALLOCATION",
+          "url": "http://la-staging-newqa.devprodqa.exotel.in/v1/tenants/SID/greenvn"
+        }
+      ],
+      "api": "LA_GREENVN_CREATE_ALLOCATION",
+      "method": "POST",
+      "headers": [
+        {
+          "key": "Content-type",
+          "value": "application/json"
+        }
+      ],
+      "endpoint": {
+        "authorization_type": "Basic",
+        "authorization_token": "ZXhvdGVsdDpleG90ZWx0",
+        "sid": "exotelt"
+      },
+      "pre_op_sequence": [],
+      "default_parameters": {
+        "seed": {
+          "apin": {
+            "min": 1000000000,
+            "max": 7000000000
+          },
+          "bpin": {
+            "min": 1000000000,
+            "max": 9000000000
+          },
+          "connection_id": {
+            "min": 0,
+            "max": 9000000000
+          },
+          "transaction_id": {
+            "min": 0,
+            "max": 1000000000000000000
+          },
+          "pin_length": {
+            "min": 1,
+            "max": 10
+          },
+          "vns": {
+            "min": 1000000000,
+            "max": 7000000000
+          },
+          "numbers": {
+            "min": 1000000000,
+            "max": 7000000000
+          }
+        },
+        "country_code": "+91",
+        "usage": "twoway",
+        "deallocation_policy": {
+          "duration": "45m"
+        }
+      },
+      "vegeta": {
+        "rate_of_requests": 300,
+        "duration_in_seconds": 300,
+        "duplicacy_percentage": 10,
+        "timeout_in_milliseconds": 120000,
+        "keep_alive": true
+      }
+    },
+    {
+      "name": "act-1.003",
+      "type": "single",
+      "allocate_url": [
+        {
+          "use_case": "LA_GREENVN_CREATE_ALLOCATION",
+          "url": "http://la-staging-newqa.devprodqa.exotel.in/v1/tenants/SID/greenvn"
+        }
+      ],
+      "api": "LA_GREENVN_CREATE_ALLOCATION",
+      "method": "POST",
+      "headers": [
+        {
+          "key": "Content-type",
+          "value": "application/json"
+        }
+      ],
+      "endpoint": {
+        "authorization_type": "Basic",
+        "authorization_token": "ZXhvdGVsdDpleG90ZWx0",
+        "sid": "exotelt"
+      },
+      "pre_op_sequence": [],
+      "default_parameters": {
+        "seed": {
+          "apin": {
+            "min": 1000000000,
+            "max": 7000000000
+          },
+          "bpin": {
+            "min": 1000000000,
+            "max": 9000000000
+          },
+          "connection_id": {
+            "min": 0,
+            "max": 9000000000
+          },
+          "transaction_id": {
+            "min": 0,
+            "max": 1000000000000000000
+          },
+          "pin_length": {
+            "min": 1,
+            "max": 10
+          },
+          "vns": {
+            "min": 1000000000,
+            "max": 7000000000
+          },
+          "numbers": {
+            "min": 1000000000,
+            "max": 7000000000
+          }
+        },
+        "country_code": "+91",
+        "usage": "twoway",
+        "deallocation_policy": {
+          "duration": "45m"
+        }
+      },
+      "vegeta": {
+        "rate_of_requests": 400,
+        "duration_in_seconds": 300,
+        "duplicacy_percentage": 10,
+        "timeout_in_milliseconds": 120000,
+        "keep_alive": true
+      }
+    },
+    {
+      "name": "act-1.004",
+      "type": "single",
+      "allocate_url": [
+        {
+          "use_case": "LA_GREENVN_CREATE_ALLOCATION",
+          "url": "http://la-staging-newqa.devprodqa.exotel.in/v1/tenants/SID/greenvn"
+        }
+      ],
+      "api": "LA_GREENVN_CREATE_ALLOCATION",
+      "method": "POST",
+      "headers": [
+        {
+          "key": "Content-type",
+          "value": "application/json"
+        }
+      ],
+      "endpoint": {
+        "authorization_type": "Basic",
+        "authorization_token": "ZXhvdGVsdDpleG90ZWx0",
+        "sid": "exotelt"
+      },
+      "pre_op_sequence": [],
+      "default_parameters": {
+        "seed": {
+          "apin": {
+            "min": 1000000000,
+            "max": 7000000000
+          },
+          "bpin": {
+            "min": 1000000000,
+            "max": 9000000000
+          },
+          "connection_id": {
+            "min": 0,
+            "max": 9000000000
+          },
+          "transaction_id": {
+            "min": 0,
+            "max": 1000000000000000000
+          },
+          "pin_length": {
+            "min": 1,
+            "max": 10
+          },
+          "vns": {
+            "min": 1000000000,
+            "max": 7000000000
+          },
+          "numbers": {
+            "min": 1000000000,
+            "max": 7000000000
+          }
+        },
+        "country_code": "+91",
+        "usage": "twoway",
+        "deallocation_policy": {
+          "duration": "45m"
+        }
+      },
+      "vegeta": {
+        "rate_of_requests": 200,
+        "duration_in_seconds": 3600,
+        "duplicacy_percentage": 10,
+        "timeout_in_milliseconds": 120000,
+        "keep_alive": true
+      }
+    }
+  ]
+}
